@@ -3,3 +3,59 @@ Link para download do Git:
 https://git-scm.com/download/win
 
 O Git Bash é um terminal extendido para otimizar o uso do Git.
+
+PARA IDENTIFICAR O USUARIO QUE FEZ AS ALTERAÇÕES NO CODIGO PARA SER ENVIADO:
+
+git config --global user.name "Rodrigo Garcia"
+git config --global user.email "wrgarcia2007@hotmail.com" 
+
+PARA MOSTRAR TODOS OS CODIGOS QUE FORAM ALTERADOS
+
+git status
+
+PARA ADICIONAR OS ARQUIVOS
+
+Git add "DesafioFundamentos/Models/Estacionamento.cs"
+
+PARA COMMIT DOS ARQUIVOS 
+
+git commit -m "Desafio concluido!"
+
+PARA SUBIR AO REPOSITORIO
+
+git push
+
+PARA COLOCAR A CHAVE SSH DENTRO DA MAQUINA 
+
+Uma vez instalado o git na maquina usar o comando para gerar a chave ssh abrindo o 	GIT BASH
+
+ssh-keygen -t ed25519 -c wrgarcia2007@hotmail.com
+UMA VEZ CRIADO IR A TE A PASTA SSH DENTRO USER/WRGARCIA
+
+A CHAVE CRIADA É A .PUB PARA VERMOS O INTERNO DO ARQUIVO USAR O COMANDO CAT
+
+Cat id_ed25519.pub
+
+uma vez pego o codigo na maquina colocar dentro do github na aba SSH keys/Add new
+depois de adicionado utillizar o Agent 
+
+eval $(ssh-agent -s)
+ssh-add id_ed25519
+(vai pedir o password e a identificação)
+
+COMANDO INICIAIS DO GIT:
+
+git init
+git add
+git commit
+
+COMANDO PARA VER QUAL EMAIL DO GITHUB
+
+Git config --list
+
+COMANDO PARA TROCAR O EMAIL E USERNAME
+
+Git config --global --unset user.email
+Git config --global --unset user.name
+
+
